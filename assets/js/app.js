@@ -8,12 +8,14 @@
 
   var PHONE = "4915753815179";
   var WA = "https://wa.me/" + PHONE;
+  // resolve asset base from this script's own URL so subpages (/iphone-reparatur/…) load data correctly
+  var BASE = (function () { var s = document.currentScript; return (s && s.src) ? s.src.replace(/assets\/js\/app\.js.*$/, "") : ""; })();
   var T = function (k) { return window.MT ? MT.tr(k) : k; };
   var lang = function () { return window.MT ? MT.lang : "de"; };
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var DATA = [];
   var GROUP_ORDER = [];
-  var activeGroup = "iPhone";
+  var activeGroups = ["iPhone"];   // matrix filter; landing pages override via body[data-brand]
 
   /* ---------- inline icons ---------- */
   var ICON = {
@@ -159,11 +161,11 @@
   function buildChips() {
     var host = $("#brandChips"); if (!host) return;
     host.innerHTML = GROUP_ORDER.map(function (g) {
-      return '<button class="chip-btn' + (activeGroup === g ? " is-on" : "") + '" data-g="' + esc(g) + '">' + esc(glabel(g)) + "</button>";
+      return '<button class="chip-btn' + (activeGroups.indexOf(g) >= 0 ? " is-on" : "") + '" data-g="' + esc(g) + '">' + esc(glabel(g)) + "</button>";
     }).join("");
     host.querySelectorAll(".chip-btn").forEach(function (b) {
       b.addEventListener("click", function () {
-        activeGroup = b.getAttribute("data-g");
+        activeGroups = [b.getAttribute("data-g")];
         var s = $("#deviceSearch"); if (s) s.value = "";
         buildChips(); renderMatrix();
       });
@@ -174,7 +176,7 @@
   function currentRows() {
     var q = ($("#deviceSearch") ? $("#deviceSearch").value : "").trim().toLowerCase();
     if (q) return DATA.filter(function (d) { return d.device.toLowerCase().indexOf(q) !== -1; });
-    return DATA.filter(function (d) { return d.group === activeGroup; });
+    return DATA.filter(function (d) { return activeGroups.indexOf(d.group) >= 0; });
   }
   function columnsFor(rows) {
     var set = {};
@@ -286,7 +288,7 @@
     var search = $("#deviceSearch");
     if (search) search.addEventListener("input", renderMatrix);
 
-    fetch("assets/data/prices.json").then(function (r) { return r.json(); }).then(function (data) {
+    fetch(BASE + "assets/data/prices.json").then(function (r) { return r.json(); }).then(function (data) {
       DATA = (data.devices || []).map(function (d) {
         return { group: gkey(d.group), device: d.device, repairs: d.repairs || [] };
       });
@@ -295,7 +297,9 @@
       DATA.forEach(function (d) { seen[d.group] = true; });
       GROUP_ORDER = pref.filter(function (g) { return seen[g]; });
       Object.keys(seen).forEach(function (g) { if (GROUP_ORDER.indexOf(g) === -1) GROUP_ORDER.push(g); });
-      if (GROUP_ORDER.indexOf(activeGroup) === -1) activeGroup = GROUP_ORDER[0];
+      var pageBrand = document.body.getAttribute("data-brand");
+      if (pageBrand) activeGroups = pageBrand.split(",").map(function (s) { return s.trim(); });
+      if (GROUP_ORDER.indexOf(activeGroups[0]) === -1) activeGroups = [GROUP_ORDER[0]];
 
       var rank = {}; GROUP_ORDER.forEach(function (g, i) { rank[g] = i; });
       DATA.sort(function (a, b) {
@@ -303,7 +307,7 @@
         return ra !== rb ? ra - rb : a.device.localeCompare(b.device);
       });
 
-      renderServices(); renderFeatured(); buildChips(); renderMatrix(); fillDatalist();
+      renderServices(); renderFeatured(); if (!pageBrand) buildChips(); renderMatrix(); fillDatalist();
     }).catch(function () {
       renderServices(); renderFeatured();
       var host = $("#matrix");
@@ -312,7 +316,9 @@
     });
 
     window.addEventListener("mt:lang", function () {
-      renderServices(); renderFeatured(); buildChips(); renderMatrix();
+      renderServices(); renderFeatured();
+      if (!document.body.getAttribute("data-brand")) buildChips();
+      renderMatrix();
     });
   }
 

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tarikv1.github.io/mtech3land/sitemap.xml

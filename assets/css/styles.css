@@ -470,3 +470,27 @@ button{font-family:inherit}
   .matrix{min-width:560px}
   .contact__photo img{height:180px}
 }
+
+/* ============================================================
+   v3 — SEO landing pages + legal pages
+   ============================================================ */
+.crumbs{display:flex;gap:8px;align-items:center;font-family:var(--f-mono);font-size:.78rem;color:var(--dim);margin-bottom:18px}
+.crumbs a{color:var(--muted)}
+.crumbs a:hover{color:var(--red-2)}
+.hero__title--sm{font-size:clamp(2.1rem,5vw,3.7rem)}
+.prose{max-width:820px}
+.prose__body p{color:var(--muted);font-size:1.06rem;margin:0 0 16px;max-width:70ch}
+.prose__body b{color:var(--text)}
+.prose__issues{margin-top:22px;font-family:var(--f-mono);font-size:.82rem;color:var(--muted)}
+.prose__issues b{color:var(--red-2);font-weight:500}
+.prose--legal .prose__body p{font-size:.98rem;line-height:1.7}
+.prose--legal a{color:var(--red-2);text-decoration:underline}
+.prose__note{margin-top:20px!important;padding:12px 14px;border:1px dashed var(--line-2);border-radius:10px;font-size:.86rem!important;color:var(--dim)!important;font-style:italic}
+
+/* popular-repair link tiles (home) */
+.plinks{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+.plink{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--bg-2);color:var(--text);font-family:var(--f-display);font-weight:600;transition:transform .2s var(--ease),border-color .2s,color .2s}
+.plink:hover{border-color:var(--red);transform:translateY(-2px);color:#fff}
+.plink em{color:var(--red-2);font-family:var(--f-mono);font-style:normal;font-size:1.1em}
+@media(max-width:760px){.plinks{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.plinks{grid-template-columns:1fr}}

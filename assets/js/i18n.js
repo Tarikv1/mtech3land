@@ -34,6 +34,8 @@
       "services.kicker": "Was wir reparieren",
       "services.title": "Alles mit Akku und Bildschirm.",
       "services.lede": "Von zersprungenem Display bis Wasserschaden — Originalqualität, transparente Preise, schnelle Bearbeitung.",
+      "plinks.kicker": "Direkt zur Reparatur",
+      "plinks.title": "Wähl dein Gerät.",
 
       "prices.kicker": "Preise",
       "prices.title": "Faire Festpreise. Keine Überraschungen.",
@@ -140,6 +142,8 @@
       "services.kicker": "What we fix",
       "services.title": "Anything with a battery and a screen.",
       "services.lede": "From a cracked display to water damage — original-grade parts, transparent prices, quick turnaround.",
+      "plinks.kicker": "Straight to the repair",
+      "plinks.title": "Pick your device.",
 
       "prices.kicker": "Prices",
       "prices.title": "Fair fixed prices. No surprises.",
@@ -219,6 +223,14 @@
       "foot.rights": "All prices incl. VAT · subject to change."
     }
   };
+
+  // landing pages inject their own strings via window.MT_PAGE_STRINGS (defined before this script)
+  if (window.MT_PAGE_STRINGS) {
+    ["de", "en"].forEach(function (L) {
+      var extra = window.MT_PAGE_STRINGS[L];
+      if (extra) for (var k in extra) STR[L][k] = extra[k];
+    });
+  }
 
   var state = { lang: "de" };
 
