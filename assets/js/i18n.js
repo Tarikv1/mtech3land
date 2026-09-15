@@ -89,7 +89,7 @@
 
       "rev.kicker": "Bewertungen",
       "rev.title": "5,0 von 5 auf Google.",
-      "rev.lede": "18 Bewertungen, alle 5 Sterne. Ein paar Stimmen unserer Kundschaft.",
+      "rev.lede": "32 Bewertungen, alle 5 Sterne. Ein paar Stimmen unserer Kundschaft.",
       "rev.q1": "„Sehr freundlich, kompetent und zuverlässig. Mein Handy wurde schnell und professionell repariert. Klare Empfehlung!“",
       "rev.q2": "„Ausgezeichneter Service! Schnelle und zuverlässige Hilfe, sehr freundlich und kompetent. Absolut empfehlenswert.“",
       "rev.q3": "„Superschnelle Reparatur. Sehr freundlicher Inhaber. Daumen hoch! 👍“",
@@ -197,7 +197,7 @@
 
       "rev.kicker": "Reviews",
       "rev.title": "5.0 out of 5 on Google.",
-      "rev.lede": "18 reviews, all 5 stars. A few words from our customers.",
+      "rev.lede": "32 reviews, all 5 stars. A few words from our customers.",
       "rev.q1": "“Very friendly, competent and reliable. My phone was repaired quickly and professionally. Highly recommended!”",
       "rev.q2": "“Excellent service! Quick and reliable help, very friendly and competent. Absolutely recommended.”",
       "rev.q3": "“Super fast repair. Very friendly owner. Thumbs up! 👍”",

@@ -40,6 +40,27 @@ Seeded from a comparable Freiburg repair shop's public price list (147 devices, 
 - [ ] Double-check **prices** and **opening hours**.
 - [ ] Optional: replace the Google Fonts `<link>` with self-hosted fonts for a fully offline site.
 
+## Google rating & review count (auto-update)
+The "5,0 · 32 Google-Bewertungen" figures on every page come from `assets/data/reviews.json`.
+`scripts/update-reviews.mjs` rewrites all pages + `i18n.js` from that file, and the GitHub Action
+`.github/workflows/update-reviews.yml` runs it daily (04:17 UTC): it asks the Google Places API for
+the current rating/count, and commits + pushes only when something changed (GitHub Pages then redeploys).
+
+**One-time setup (needed once, otherwise the numbers stay as they are):**
+1. In [Google Cloud Console](https://console.cloud.google.com/) create/select a project, attach a billing
+   account (Google requires one even for free usage) and enable **Places API (New)**.
+2. Create an **API key** (APIs & Services → Credentials) and restrict it to *Places API (New)*.
+3. In this repo: Settings → Secrets and variables → Actions → **New repository secret**
+   `GOOGLE_PLACES_API_KEY` = the key.
+4. Actions tab → "Update Google reviews" → **Run workflow** to test. Every run afterwards is automatic.
+
+Cost: 1 request/day (~30/month) — far inside the free monthly quota of Places API (New).
+Place ID is hardcoded in the script (`ChIJyVwljXm7kUcRjNI5xSnKFxk`); override with a repo variable
+`GOOGLE_PLACE_ID` if the business ever moves to a new Google listing.
+
+Manual update without API key: edit `rating`/`count` in `assets/data/reviews.json`, then
+`node scripts/update-reviews.mjs apply` and push.
+
 ## Fonts / licensing
 Saira, IBM Plex Sans, JetBrains Mono — all SIL Open Font License, free for commercial use.
 No third-party images are bundled; the logo mark is an original SVG.
