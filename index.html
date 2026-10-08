@@ -17,10 +17,7 @@
 <meta property="og:image" content="assets/img/og.svg" />
 <meta property="og:locale" content="de_DE" />
 
-<!-- Fonts: Saira (display), IBM Plex Sans (body), JetBrains Mono (specs) -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Saira:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<!-- Fonts: self-hosted in assets/fonts (see styles.css @font-face) — no Google Fonts CDN -->
 
 <link rel="stylesheet" href="assets/css/styles.css" />
 
@@ -359,9 +356,12 @@
       <figure class="contact__photo">
         <img src="assets/img/interior.jpg" loading="lazy" alt="Innenansicht Mtech3land mit Verkaufstheke und Zubehör" />
       </figure>
-      <div class="contact__map">
-        <iframe title="Karte Mtech3land Weil am Rhein" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Hauptstra%C3%9Fe%20177,%2079576%20Weil%20am%20Rhein&z=16&output=embed"></iframe>
+      <div class="contact__map" id="mapHolder" data-map-src="https://www.google.com/maps?q=Hauptstra%C3%9Fe%20177,%2079576%20Weil%20am%20Rhein&z=16&output=embed">
+        <button class="mapload" type="button" id="mapLoad">
+          <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z"/></svg>
+          <span class="mapload__t" data-i18n="map.load">Karte laden</span>
+          <span class="mapload__n" data-i18n="map.note">Beim Laden werden Daten an Google übertragen.</span>
+        </button>
       </div>
     </div>
   </div>

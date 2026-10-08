@@ -285,6 +285,15 @@
     var y = $("#year"); if (y) y.textContent = new Date().getFullYear();
     buildMarquee(); wireNav(); wireForm(); markReveal();
 
+    var mapBtn = document.getElementById("mapLoad");
+    if (mapBtn) mapBtn.addEventListener("click", function () {
+      var h = document.getElementById("mapHolder"); if (!h) return;
+      var f = document.createElement("iframe");
+      f.title = "Karte Mtech3land"; f.loading = "lazy"; f.src = h.getAttribute("data-map-src");
+      f.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
+      h.innerHTML = ""; h.appendChild(f);
+    });
+
     var search = $("#deviceSearch");
     if (search) search.addEventListener("input", renderMatrix);
 

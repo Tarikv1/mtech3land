@@ -101,6 +101,8 @@
       "contact.hours": "Öffnungszeiten",
       "contact.closed": "geschlossen",
       "contact.directions": "Route planen",
+      "map.load": "Karte laden",
+      "map.note": "Beim Laden werden Daten an Google übertragen.",
 
       "day.mo": "Montag", "day.tu": "Dienstag", "day.we": "Mittwoch", "day.th": "Donnerstag",
       "day.fr": "Freitag", "day.sa": "Samstag", "day.so": "Sonntag",
@@ -209,6 +211,8 @@
       "contact.hours": "Opening hours",
       "contact.closed": "closed",
       "contact.directions": "Get directions",
+      "map.load": "Load map",
+      "map.note": "Loading the map sends data to Google.",
 
       "day.mo": "Monday", "day.tu": "Tuesday", "day.we": "Wednesday", "day.th": "Thursday",
       "day.fr": "Friday", "day.sa": "Saturday", "day.so": "Sunday",

@@ -14,9 +14,6 @@
 <meta property="og:image" content="../assets/img/og.svg" />
 <meta property="og:url" content="https://mtech3land.com/datenrettung/" />
 <meta property="og:locale" content="de_DE" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Saira:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../assets/css/styles.css" />
 <script>window.MT_PAGE_STRINGS={"de":{"page.crumb":"Datenrettung","page.h1a":"Datenrettung","page.h1b":"im Dreiland.","page.sub":"Handy tot, Fotos weg? Wir retten Daten von defekten Smartphones, Tablets und Laptops – diskret und sicher.","page.ctaPrices":"Mehr erfahren","page.introKicker":"Fotos & Daten retten","page.introTitle":"Deine Daten sind nicht verloren","page.intro":"<p>Ein Wasserschaden, ein Sturz oder ein defektes Display – und plötzlich ist der Zugriff auf <b>Fotos, Kontakte und Nachrichten</b> weg. In vielen Fällen sind die Daten aber noch da. Wir prüfen dein Gerät und holen heraus, was zu retten ist – von Smartphones über Tablets bis zu Laptops.</p><p>Alles läuft <b>diskret und vertraulich</b>. Die Ersteinschätzung ist kostenlos, den Preis richten wir nach dem Aufwand – transparent und vorab besprochen.</p>","page.issuesLabel":"Wir retten Daten von:","page.issues":"Smartphones · Tablets · Laptops · Wasserschaden · defektem Display","page.priceTitle":"Datenrettung – so läuft's","page.priceLede":"Kostenlose Ersteinschätzung. Preis nach Aufwand, immer vorab besprochen. Frag uns einfach per WhatsApp."},"en":{"page.crumb":"Data recovery","page.h1a":"Data recovery","page.h1b":"in the Dreiland.","page.sub":"Phone dead, photos gone? We recover data from broken smartphones, tablets and laptops – discreet and safe.","page.ctaPrices":"Learn more","page.introKicker":"Recover photos & data","page.introTitle":"Your data isn't lost","page.intro":"<p>Water damage, a drop or a broken display – and suddenly your <b>photos, contacts and messages</b> are out of reach. In many cases the data is still there. We check your device and recover what can be saved – from smartphones to tablets and laptops.</p><p>Everything stays <b>discreet and confidential</b>. The initial assessment is free; the price depends on the effort – transparent and agreed upfront.</p>","page.issuesLabel":"We recover data from:","page.issues":"Smartphones · Tablets · Laptops · Water damage · Broken display","page.priceTitle":"Data recovery – how it works","page.priceLede":"Free initial assessment. Price based on effort, always agreed upfront. Just ask us on WhatsApp."}};</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Datenrettung","areaServed":["Weil am Rhein","Basel","Lörrach","Dreiländereck"],"url":"https://mtech3land.com/datenrettung/","provider":{"@type":"MobilePhoneStore","name":"Mtech3land","telephone":"+4915753815179","priceRange":"€€","address":{"@type":"PostalAddress","streetAddress":"Hauptstraße 177","postalCode":"79576","addressLocality":"Weil am Rhein","addressCountry":"DE"},"geo":{"@type":"GeoCoordinates","latitude":47.5937219,"longitude":7.6266889},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"32"}}}</script>
@@ -140,7 +137,13 @@
     </div>
     <div class="contact__media">
       <figure class="contact__photo"><img src="../assets/img/interior.jpg" loading="lazy" alt="Innenansicht Mtech3land" /></figure>
-      <div class="contact__map"><iframe title="Karte Mtech3land" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Hauptstra%C3%9Fe%20177,%2079576%20Weil%20am%20Rhein&z=16&output=embed"></iframe></div>
+      <div class="contact__map" id="mapHolder" data-map-src="https://www.google.com/maps?q=Hauptstra%C3%9Fe%20177,%2079576%20Weil%20am%20Rhein&z=16&output=embed">
+        <button class="mapload" type="button" id="mapLoad">
+          <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z"/></svg>
+          <span class="mapload__t" data-i18n="map.load">Karte laden</span>
+          <span class="mapload__n" data-i18n="map.note">Beim Laden werden Daten an Google übertragen.</span>
+        </button>
+      </div>
     </div>
   </div>
 </section>

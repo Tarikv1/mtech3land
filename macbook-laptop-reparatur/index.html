@@ -14,9 +14,6 @@
 <meta property="og:image" content="../assets/img/og.svg" />
 <meta property="og:url" content="https://mtech3land.com/macbook-laptop-reparatur/" />
 <meta property="og:locale" content="de_DE" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Saira:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../assets/css/styles.css" />
 <script>window.MT_PAGE_STRINGS={"de":{"page.crumb":"MacBook & Laptop","page.h1a":"MacBook & Laptop","page.h1b":"Reparatur.","page.sub":"Defektes Display, klemmende Tastatur oder lahmer Laptop? Wir reparieren MacBook, Notebook & PC.","page.ctaPrices":"Preise ansehen","page.introKicker":"MacBook · Laptop · PC","page.introTitle":"Laptop-Reparatur vom Profi","page.intro":"<p>Vom <b>MacBook Air & Pro</b> bis zum Windows-<b>Notebook</b>: Wir tauschen Displays und Tastaturen, wechseln Akkus, rüsten auf <b>SSD</b> auf und befreien überhitzte Geräte vom Staub. Auch bei Wasserschaden lohnt sich oft eine Rettung.</p><p>Eine <b>kostenlose Diagnose</b> zeigt, was zu tun ist – danach bekommst du einen klaren Festpreis, bevor wir loslegen. Mit Garantie, versteht sich.</p>","page.issuesLabel":"Wir reparieren:","page.issues":"Display · Tastatur · Trackpad · Akku · SSD-Upgrade · Reinigung · Diagnose","page.priceTitle":"MacBook & Laptop Preise"},"en":{"page.crumb":"MacBook & laptop","page.h1a":"MacBook & laptop","page.h1b":"repair.","page.sub":"Broken screen, sticky keyboard or a slow laptop? We repair MacBook, notebook & PC.","page.ctaPrices":"See prices","page.introKicker":"MacBook · Laptop · PC","page.introTitle":"Laptop repair by the pros","page.intro":"<p>From <b>MacBook Air & Pro</b> to Windows <b>notebooks</b>: we replace screens and keyboards, swap batteries, upgrade to <b>SSD</b> and free overheating machines from dust. Even water damage is often recoverable.</p><p>A <b>free diagnosis</b> shows what's needed – then you get a clear fixed price before we start. With warranty, of course.</p>","page.issuesLabel":"We repair:","page.issues":"Screen · Keyboard · Trackpad · Battery · SSD upgrade · Cleaning · Diagnostics","page.priceTitle":"MacBook & laptop prices"}};</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"MacBook, Laptop & PC Reparatur","areaServed":["Weil am Rhein","Basel","Lörrach","Dreiländereck"],"url":"https://mtech3land.com/macbook-laptop-reparatur/","provider":{"@type":"MobilePhoneStore","name":"Mtech3land","telephone":"+4915753815179","priceRange":"€€","address":{"@type":"PostalAddress","streetAddress":"Hauptstraße 177","postalCode":"79576","addressLocality":"Weil am Rhein","addressCountry":"DE"},"geo":{"@type":"GeoCoordinates","latitude":47.5937219,"longitude":7.6266889},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"32"}}}</script>
@@ -151,7 +148,13 @@
     </div>
     <div class="contact__media">
       <figure class="contact__photo"><img src="../assets/img/interior.jpg" loading="lazy" alt="Innenansicht Mtech3land" /></figure>
-      <div class="contact__map"><iframe title="Karte Mtech3land" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Hauptstra%C3%9Fe%20177,%2079576%20Weil%20am%20Rhein&z=16&output=embed"></iframe></div>
+      <div class="contact__map" id="mapHolder" data-map-src="https://www.google.com/maps?q=Hauptstra%C3%9Fe%20177,%2079576%20Weil%20am%20Rhein&z=16&output=embed">
+        <button class="mapload" type="button" id="mapLoad">
+          <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z"/></svg>
+          <span class="mapload__t" data-i18n="map.load">Karte laden</span>
+          <span class="mapload__n" data-i18n="map.note">Beim Laden werden Daten an Google übertragen.</span>
+        </button>
+      </div>
     </div>
   </div>
 </section>
