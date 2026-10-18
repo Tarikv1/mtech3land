@@ -1,0 +1,57 @@
+{
+  "id": "laptop",
+  "path": "/laptop-reparatur/",
+  "label": { "de": "Laptop-Reparatur", "en": "Laptop repair" },
+  "title": { "de": "Laptop-Reparatur in Weil am Rhein, nahe Basel | Mtech3land" },
+  "description": { "de": "Laptop-Reparatur in Weil am Rhein für MacBook und Microsoft Surface: Akku ab {min.akku} €, Fehlerdiagnose ab {min.fehleranalyse} €, Komponentenwechsel." },
+  "h1": { "de": "Laptop-Reparatur in Weil am Rhein", "en": "Laptop repair in Weil am Rhein" },
+  "intro": {
+    "de": [
+      "Dein Laptop startet nicht, der Akku hält nicht mehr oder Tasten funktionieren nicht? Wir übernehmen Hardware-Reparaturen an Laptops – in unserem Laden in Weil am Rhein, nahe Basel.",
+      "Für MacBook und Microsoft Surface findest du die Preise direkt hier. Hast du einen Laptop einer anderen Marke, machen wir zuerst eine Fehlerdiagnose. Danach sagen wir dir, was kaputt ist und welche Teile wir tauschen müssen."
+    ],
+    "en": [
+      "Your laptop won't start, the battery doesn't last or some keys have stopped working? We do hardware repairs on laptops – in our shop in Weil am Rhein, near Basel.",
+      "For MacBook and Microsoft Surface you'll find the prices right here. If your laptop is another brand, we start with a diagnosis. Then we tell you what's broken and which parts need replacing."
+    ]
+  },
+  "services": [
+    { "de": "Hardware-Reparaturen: Display, Akku, Tastatur, Trackpad und Ladebuchse", "en": "Hardware repairs: screen, battery, keyboard, trackpad and charging port" },
+    { "de": "Fehlerdiagnose, auch für andere Marken", "en": "Diagnostics, for other brands too" },
+    { "de": "Komponentenwechsel: Wir tauschen gezielt die defekten Teile", "en": "Component replacement: we swap out exactly the faulty parts" },
+    { "de": "Wasserschaden", "en": "Water damage" }
+  ],
+  "picker": { "type": "laptop", "brand": null },
+  "models": { "parents": ["macbook", "laptop"], "extra": [] },
+  "faq": [
+    {
+      "q": { "de": "Was kostet die Fehlerdiagnose?", "en": "How much does the diagnosis cost?" },
+      "a": {
+        "de": "Die Fehlerdiagnose für Laptops kostet bei uns ab {min.fehleranalyse} €. Danach weißt du, was kaputt ist und was die Reparatur kostet.",
+        "en": "Laptop diagnostics at our shop start at {min.fehleranalyse} €. Afterwards you'll know what's broken and what the repair costs."
+      }
+    },
+    {
+      "q": { "de": "Mein Laptop ist kein MacBook und kein Surface. Repariert ihr ihn trotzdem?", "en": "My laptop isn't a MacBook or a Surface. Can you still repair it?" },
+      "a": {
+        "de": "Bring ihn vorbei. Wir machen zuerst eine Fehlerdiagnose und sagen dir dann, ob und wie wir ihn reparieren können.",
+        "en": "Bring it in. We start with a diagnosis and then tell you whether and how we can repair it."
+      }
+    },
+    {
+      "q": { "de": "Wie lange dauert die Reparatur?", "en": "How long does the repair take?" },
+      "a": {
+        "de": "Das hängt vom Schaden und von den Ersatzteilen ab. Nach der Diagnose sagen wir dir, wie lange es dauert.",
+        "en": "It depends on the damage and the parts. After the diagnosis we'll tell you how long it takes."
+      }
+    },
+    {
+      "q": { "de": "Kann ich meinen Laptop gleich dalassen?", "en": "Can I leave my laptop with you?" },
+      "a": {
+        "de": "Ja. Bring ihn einfach während der Öffnungszeiten vorbei: {hours}. Nach der Diagnose sagen wir dir, wann er fertig ist.",
+        "en": "Yes. Just bring it in during opening hours: {hours}. After the diagnosis we'll tell you when it's ready."
+      }
+    }
+  ],
+  "related": ["/macbook-reparatur/", "/tablet-reparatur/", "/fehlerdiagnose/", "/datenrettung/"]
+}

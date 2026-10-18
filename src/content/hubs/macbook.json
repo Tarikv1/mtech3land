@@ -1,0 +1,59 @@
+{
+  "id": "macbook",
+  "path": "/macbook-reparatur/",
+  "label": { "de": "MacBook-Reparatur", "en": "MacBook repair" },
+  "title": { "de": "MacBook-Reparatur in Weil am Rhein, nahe Basel | Mtech3land" },
+  "description": { "de": "MacBook-Reparatur in Weil am Rhein, nahe Basel: Display ab {min.display} €, Akku ab {min.akku} €, Tastatur ab {min.tastatur} €. Für MacBook Air und Pro." },
+  "h1": { "de": "MacBook-Reparatur in Weil am Rhein", "en": "MacBook repair in Weil am Rhein" },
+  "intro": {
+    "de": [
+      "Display kaputt, Akku schwach oder die Tastatur reagiert nicht mehr? Wir reparieren dein MacBook in unserem Laden in Weil am Rhein, nahe Basel.",
+      "Die Preise für MacBook Air und MacBook Pro findest du hier nach Modell sortiert. Welches MacBook du hast, verrät die Modellnummer auf der Unterseite, zum Beispiel A2338. Die kannst du direkt im Preisfinder suchen."
+    ],
+    "en": [
+      "Broken screen, weak battery or the keyboard stopped responding? We repair your MacBook in our shop in Weil am Rhein, near Basel.",
+      "Here you'll find the prices for MacBook Air and MacBook Pro, model by model. The model number on the bottom, for example A2338, tells you which MacBook you have – and you can search for it right in the price finder."
+    ]
+  },
+  "services": [
+    { "de": "Displaytausch", "en": "Screen replacement" },
+    { "de": "Akkutausch", "en": "Battery replacement" },
+    { "de": "Tastatur, Trackpad und Touchbar", "en": "Keyboard, trackpad and Touch Bar" },
+    { "de": "Ladebuchse", "en": "Charging port" },
+    { "de": "Komponentenwechsel", "en": "Component replacement" },
+    { "de": "Wasserschaden und Fehlerdiagnose", "en": "Water damage and diagnostics" }
+  ],
+  "picker": { "type": "laptop", "brand": "apple" },
+  "models": { "parents": ["macbook"], "extra": [] },
+  "faq": [
+    {
+      "q": { "de": "Was kostet ein neuer Akku fürs MacBook?", "en": "How much is a new MacBook battery?" },
+      "a": {
+        "de": "Je nach Modell ab {min.akku} €. Den genauen Preis für dein MacBook zeigt dir der Preisfinder auf dieser Seite.",
+        "en": "Depending on the model, from {min.akku} €. The price finder on this page shows the exact price for your MacBook."
+      }
+    },
+    {
+      "q": { "de": "Wie finde ich heraus, welches MacBook ich habe?", "en": "How do I find out which MacBook I have?" },
+      "a": {
+        "de": "Dreh es um: Auf der Unterseite steht eine Modellnummer, zum Beispiel A2338. Gib sie in die Suche im Preisfinder ein.",
+        "en": "Turn it over: there's a model number on the bottom, for example A2338. Type it into the price finder's search."
+      }
+    },
+    {
+      "q": { "de": "Was kostet die Fehlerdiagnose?", "en": "How much does the diagnosis cost?" },
+      "a": {
+        "de": "Die Fehlerdiagnose für dein MacBook kostet ab {min.fehleranalyse} €. Danach weißt du, was kaputt ist und was die Reparatur kostet.",
+        "en": "Diagnostics for your MacBook start at {min.fehleranalyse} €. Afterwards you'll know what's broken and what the repair costs."
+      }
+    },
+    {
+      "q": { "de": "Kann ich mein MacBook gleich dalassen?", "en": "Can I leave my MacBook with you?" },
+      "a": {
+        "de": "Ja. Bring es einfach während der Öffnungszeiten vorbei: {hours}. Nach der Diagnose sagen wir dir, wann es fertig ist.",
+        "en": "Yes. Just bring it in during opening hours: {hours}. After the diagnosis we'll tell you when it's ready."
+      }
+    }
+  ],
+  "related": ["/laptop-reparatur/", "/iphone-reparatur/", "/ipad-reparatur/", "/datenrettung/"]
+}

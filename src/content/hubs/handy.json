@@ -1,0 +1,62 @@
+{
+  "id": "handy",
+  "path": "/handy-reparatur/",
+  "label": { "de": "Handy-Reparatur", "en": "Phone repair" },
+  "title": { "de": "Handy-Reparatur in Weil am Rhein, nahe Basel | Mtech3land" },
+  "description": { "de": "Handy-Reparatur in Weil am Rhein: Display ab {min.display} €, Akku ab {min.akku} €. Für iPhone, Samsung, Google Pixel und Huawei, oft in 30 Minuten." },
+  "h1": { "de": "Handy-Reparatur in Weil am Rhein", "en": "Phone repair in Weil am Rhein" },
+  "intro": {
+    "de": [
+      "Display gesprungen, Akku schnell leer oder das Handy lädt nicht mehr? Wir reparieren Smartphones von Apple, Samsung, Google und Huawei – in unserem Laden in Weil am Rhein, direkt an der Grenze zu Basel.",
+      "Display und Akku tauschen wir oft in 30 Minuten. Einen Termin brauchst du nicht: Komm einfach vorbei oder schreib uns vorher per WhatsApp. Was die Reparatur für dein Modell kostet, zeigt dir der Preisfinder."
+    ],
+    "en": [
+      "Cracked screen, battery draining fast or your phone won't charge? We repair smartphones from Apple, Samsung, Google and Huawei – in our shop in Weil am Rhein, right on the border with Basel.",
+      "We often replace screens and batteries within 30 minutes. You don't need an appointment: just drop by, or message us on WhatsApp first. The price finder shows what the repair costs for your model."
+    ]
+  },
+  "services": [
+    { "de": "Displaytausch bei Sprung oder schwarzem Bild", "en": "Screen replacement for cracks or a black screen" },
+    { "de": "Akkutausch, wenn der Akku schnell leer ist", "en": "Battery replacement when the battery drains fast" },
+    { "de": "Ladebuchse, wenn das Handy nicht mehr lädt", "en": "Charging port when your phone won't charge" },
+    { "de": "Rückkamera, Frontkamera und Kameraglas", "en": "Rear camera, front camera and camera glass" },
+    { "de": "Backcover und Hörmuschel", "en": "Back glass and earpiece" },
+    { "de": "Wasserschaden und Fehlerdiagnose", "en": "Water damage and diagnostics" }
+  ],
+  "picker": { "type": "handy", "brand": null },
+  "models": {
+    "parents": ["iphone", "samsung", "handy"],
+    "extra": [{ "label": { "de": "Apple Watch", "en": "Apple Watch" }, "url": "/apple-watch-reparatur/" }]
+  },
+  "faq": [
+    {
+      "q": { "de": "Was kostet ein Displaytausch?", "en": "How much does a screen replacement cost?" },
+      "a": {
+        "de": "Das hängt vom Modell ab. Bei uns geht es ab {min.display} € los. Den genauen Preis für dein Handy zeigt dir der Preisfinder.",
+        "en": "It depends on the model. Prices start at {min.display} €. The price finder shows the exact price for your phone."
+      }
+    },
+    {
+      "q": { "de": "Wie lange dauert die Reparatur?", "en": "How long does the repair take?" },
+      "a": {
+        "de": "Oft in 30 Minuten. Dauert es länger, sagen wir dir das nach der Diagnose.",
+        "en": "Often within 30 minutes. If it takes longer, we'll tell you after the diagnosis."
+      }
+    },
+    {
+      "q": { "de": "Kann ich mein Handy gleich dalassen?", "en": "Can I leave my phone with you?" },
+      "a": {
+        "de": "Ja. Bring es einfach während der Öffnungszeiten vorbei: {hours}. Nach der Diagnose sagen wir dir, wann es fertig ist.",
+        "en": "Yes. Just bring it in during opening hours: {hours}. After the diagnosis we'll tell you when it's ready."
+      }
+    },
+    {
+      "q": { "de": "Mein Handy ist nicht in der Liste. Was nun?", "en": "My phone isn't on the list. What now?" },
+      "a": {
+        "de": "Schreib uns kurz per WhatsApp, welches Modell du hast und was kaputt ist. Wir sagen dir dann, ob wir es reparieren können und was es kostet.",
+        "en": "Send us a quick WhatsApp message with your model and what's broken. We'll tell you whether we can repair it and what it costs."
+      }
+    }
+  ],
+  "related": ["/iphone-reparatur/", "/samsung-reparatur/", "/tablet-reparatur/", "/datenrettung/", "/fehlerdiagnose/"]
+}

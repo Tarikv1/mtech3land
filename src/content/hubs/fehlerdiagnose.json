@@ -1,0 +1,57 @@
+{
+  "id": "fehlerdiagnose",
+  "path": "/fehlerdiagnose/",
+  "label": { "de": "Fehlerdiagnose", "en": "Diagnostics" },
+  "title": { "de": "Fehlerdiagnose in Weil am Rhein – ab {min.fehleranalyse} € | Mtech3land" },
+  "description": { "de": "Fehlerdiagnose in Weil am Rhein ab {min.fehleranalyse} €: Wir finden heraus, was deinem Handy, Tablet, Laptop oder deiner PlayStation fehlt. Nahe Basel." },
+  "h1": { "de": "Fehlerdiagnose in Weil am Rhein", "en": "Diagnostics in Weil am Rhein" },
+  "intro": {
+    "de": [
+      "Dein Gerät geht nicht mehr an oder funktioniert nicht richtig, und du weißt nicht, warum? Wir finden es heraus. Wir bieten Fehlerdiagnose und technische Unterstützung für verschiedene elektronische Geräte – in unserem Laden in Weil am Rhein, nahe Basel.",
+      "Die Fehlerdiagnose gibt es ab {min.fehleranalyse} €. Danach weißt du, was kaputt ist, und wir sagen dir, was die Reparatur kostet. So kannst du in Ruhe entscheiden, wie es weitergeht."
+    ],
+    "en": [
+      "Your device won't switch on or isn't working properly, and you don't know why? We'll find out. We offer diagnostics and technical support for various electronic devices – in our shop in Weil am Rhein, near Basel.",
+      "Diagnostics start at {min.fehleranalyse} €. Afterwards you know what's broken, and we tell you what the repair costs. That way you can decide calmly how to go ahead."
+    ]
+  },
+  "services": [
+    { "de": "Fehlerdiagnose für Handys, Tablets, Laptops und PlayStation", "en": "Diagnostics for phones, tablets, laptops and PlayStation" },
+    { "de": "Technische Unterstützung für verschiedene elektronische Geräte", "en": "Technical support for various electronic devices" },
+    { "de": "Prüfung nach Wasserschaden oder Sturz", "en": "Check-up after water damage or a drop" },
+    { "de": "Klare Auskunft: was kaputt ist und was die Reparatur kostet", "en": "A clear answer: what's broken and what the repair costs" }
+  ],
+  "picker": null,
+  "models": null,
+  "faq": [
+    {
+      "q": { "de": "Was kostet die Fehlerdiagnose?", "en": "How much does the diagnosis cost?" },
+      "a": {
+        "de": "Die Fehlerdiagnose kostet bei uns ab {min.fehleranalyse} €. Der genaue Preis hängt vom Gerät ab und steht in der Preisliste deines Modells.",
+        "en": "At our shop, diagnostics start at {min.fehleranalyse} €. The exact price depends on the device and is shown in your model's price list."
+      }
+    },
+    {
+      "q": { "de": "Für welche Geräte macht ihr eine Diagnose?", "en": "Which devices do you diagnose?" },
+      "a": {
+        "de": "Für Handys, Tablets, Laptops und PlayStation-Konsolen. Auch bei anderen elektronischen Geräten helfen wir gern weiter. Frag einfach kurz per WhatsApp.",
+        "en": "Phones, tablets, laptops and PlayStation consoles. We're also happy to help with other electronic devices – just ask us on WhatsApp."
+      }
+    },
+    {
+      "q": { "de": "Was passiert nach der Diagnose?", "en": "What happens after the diagnosis?" },
+      "a": {
+        "de": "Wir sagen dir, was kaputt ist und was die Reparatur kostet. Dann entscheidest du, wie es weitergeht.",
+        "en": "We tell you what's broken and what the repair costs. Then you decide how to go ahead."
+      }
+    },
+    {
+      "q": { "de": "Kann ich mein Gerät gleich dalassen?", "en": "Can I leave my device with you?" },
+      "a": {
+        "de": "Ja. Bring es während der Öffnungszeiten vorbei: {hours}. Einen Termin brauchst du nicht.",
+        "en": "Yes. Bring it in during opening hours: {hours}. You don't need an appointment."
+      }
+    }
+  ],
+  "related": ["/handy-reparatur/", "/tablet-reparatur/", "/laptop-reparatur/", "/playstation-reparatur/", "/datenrettung/"]
+}

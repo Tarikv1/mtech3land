@@ -1,0 +1,59 @@
+{
+  "id": "iphone",
+  "path": "/iphone-reparatur/",
+  "label": { "de": "iPhone-Reparatur", "en": "iPhone repair" },
+  "title": { "de": "iPhone-Reparatur in Weil am Rhein, nahe Basel | Mtech3land" },
+  "description": { "de": "iPhone-Reparatur in Weil am Rhein, nahe Basel: Display ab {min.display} €, Akku ab {min.akku} €, Ladebuchse ab {min.ladebuchse} €. Oft in 30 Minuten." },
+  "h1": { "de": "iPhone-Reparatur in Weil am Rhein", "en": "iPhone repair in Weil am Rhein" },
+  "intro": {
+    "de": [
+      "Display gesprungen, Akku schnell leer oder das iPhone lädt nicht mehr? Wir reparieren dein iPhone in unserem Laden in Weil am Rhein – direkt an der Grenze zu Basel.",
+      "Displaytausch und Akkuwechsel erledigen wir oft in 30 Minuten. Bei einigen Modellen hast du die Wahl zwischen einem Standard-Ersatzteil und einem Originalteil von Apple. Einen Termin brauchst du nicht: Komm vorbei oder schreib uns vorher per WhatsApp."
+    ],
+    "en": [
+      "Cracked screen, battery draining fast or your iPhone won't charge? We repair your iPhone in our shop in Weil am Rhein – right on the border with Basel.",
+      "We often replace screens and batteries within 30 minutes. For some models you can choose between a standard replacement part and a genuine Apple part. You don't need an appointment: drop by, or message us on WhatsApp first."
+    ]
+  },
+  "services": [
+    { "de": "Displaytausch – je nach Modell Standard oder Original Apple", "en": "Screen replacement – standard or genuine Apple, depending on the model" },
+    { "de": "Akkutausch – je nach Modell Standard oder Original Apple", "en": "Battery replacement – standard or genuine Apple, depending on the model" },
+    { "de": "Ladebuchse, wenn das iPhone nicht mehr lädt", "en": "Charging port when your iPhone won't charge" },
+    { "de": "Rückkamera, Frontkamera und Kameraglas", "en": "Rear camera, front camera and camera glass" },
+    { "de": "Backcover und Hörmuschel", "en": "Back glass and earpiece" },
+    { "de": "Wasserschaden und Fehlerdiagnose", "en": "Water damage and diagnostics" }
+  ],
+  "picker": { "type": "handy", "brand": "apple" },
+  "models": { "parents": ["iphone"], "extra": [] },
+  "faq": [
+    {
+      "q": { "de": "Was kostet ein Displaytausch beim iPhone?", "en": "How much does an iPhone screen replacement cost?" },
+      "a": {
+        "de": "Je nach Modell ab {min.display} €. Den genauen Preis für dein iPhone zeigt dir der Preisfinder auf dieser Seite.",
+        "en": "Depending on the model, from {min.display} €. The price finder on this page shows the exact price for your iPhone."
+      }
+    },
+    {
+      "q": { "de": "Welche Ersatzteile verwendet ihr?", "en": "Which parts do you use?" },
+      "a": {
+        "de": "Bei einigen Modellen hast du die Wahl: Standard-Ersatzteil oder Originalteil von Apple. Beide Preise siehst du in der Preisliste deines Modells.",
+        "en": "For some models you can choose: a standard replacement part or a genuine Apple part. You'll see both prices in your model's price list."
+      }
+    },
+    {
+      "q": { "de": "Wie lange dauert die Reparatur?", "en": "How long does the repair take?" },
+      "a": {
+        "de": "Display und Akku tauschen wir oft in 30 Minuten. Dauert es länger, sagen wir dir das nach der Diagnose.",
+        "en": "We often replace screens and batteries within 30 minutes. If it takes longer, we'll tell you after the diagnosis."
+      }
+    },
+    {
+      "q": { "de": "Ich wohne in Basel. Wie weit ist es zu euch?", "en": "I live in Basel. How far is it to you?" },
+      "a": {
+        "de": "Nicht weit: Unser Laden liegt direkt an der Grenze zu Basel, {address}. Einen Termin brauchst du nicht.",
+        "en": "Not far: our shop is right on the border with Basel, at {address}. You don't need an appointment."
+      }
+    }
+  ],
+  "related": ["/handy-reparatur/", "/ipad-reparatur/", "/macbook-reparatur/", "/samsung-reparatur/", "/datenrettung/"]
+}

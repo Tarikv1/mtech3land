@@ -1,0 +1,59 @@
+{
+  "id": "samsung",
+  "path": "/samsung-reparatur/",
+  "label": { "de": "Samsung-Reparatur", "en": "Samsung repair" },
+  "title": { "de": "Samsung-Reparatur in Weil am Rhein, nahe Basel | Mtech3land" },
+  "description": { "de": "Samsung-Galaxy-Reparatur in Weil am Rhein, nahe Basel: Display ab {min.display} €, Akku ab {min.akku} €, Backcover ab {min.backcover} €. Oft in 30 Minuten." },
+  "h1": { "de": "Samsung-Reparatur in Weil am Rhein", "en": "Samsung repair in Weil am Rhein" },
+  "intro": {
+    "de": [
+      "Galaxy-Display gebrochen oder der Akku hält nicht mehr? Wir reparieren dein Samsung in unserem Laden in Weil am Rhein, direkt an der Grenze zu Basel.",
+      "Ob Galaxy S, A oder Note: Die Preise für dein Modell findest du hier. Display und Akku tauschen wir oft in 30 Minuten. Einen Termin brauchst du nicht – schreib uns einfach vorher per WhatsApp."
+    ],
+    "en": [
+      "Broken Galaxy screen or a battery that no longer lasts? We repair your Samsung in our shop in Weil am Rhein, right on the border with Basel.",
+      "Galaxy S, A or Note: you'll find the prices for your model here. We often replace screens and batteries within 30 minutes. You don't need an appointment – just message us on WhatsApp first."
+    ]
+  },
+  "services": [
+    { "de": "Displaytausch, je nach Modell mit Originalteil", "en": "Screen replacement, with an original part depending on the model" },
+    { "de": "Akkutausch, wenn der Akku schnell leer ist", "en": "Battery replacement when the battery drains fast" },
+    { "de": "Ladebuchse, wenn dein Galaxy nicht mehr lädt", "en": "Charging port when your Galaxy won't charge" },
+    { "de": "Rückkamera, Frontkamera und Kameraglas", "en": "Rear camera, front camera and camera glass" },
+    { "de": "Backcover und Hörmuschel", "en": "Back glass and earpiece" },
+    { "de": "Wasserschaden und Fehlerdiagnose", "en": "Water damage and diagnostics" }
+  ],
+  "picker": { "type": "handy", "brand": "samsung" },
+  "models": { "parents": ["samsung"], "extra": [] },
+  "faq": [
+    {
+      "q": { "de": "Was kostet ein Displaytausch beim Samsung?", "en": "How much does a Samsung screen replacement cost?" },
+      "a": {
+        "de": "Je nach Modell ab {min.display} €. Den genauen Preis für dein Galaxy zeigt dir der Preisfinder auf dieser Seite.",
+        "en": "Depending on the model, from {min.display} €. The price finder on this page shows the exact price for your Galaxy."
+      }
+    },
+    {
+      "q": { "de": "Ich weiß nicht genau, welches Galaxy ich habe. Was nun?", "en": "I'm not sure which Galaxy I have. What now?" },
+      "a": {
+        "de": "Schau in den Einstellungen unter „Telefoninfo“ nach, dort steht der Modellname. Oder bring dein Handy einfach vorbei, dann schauen wir gemeinsam nach.",
+        "en": "Look under “About phone” in the settings – the model name is listed there. Or just bring your phone in and we'll check together."
+      }
+    },
+    {
+      "q": { "de": "Wie lange dauert die Reparatur?", "en": "How long does the repair take?" },
+      "a": {
+        "de": "Oft in 30 Minuten. Dauert es länger, sagen wir dir das nach der Diagnose.",
+        "en": "Often within 30 minutes. If it takes longer, we'll tell you after the diagnosis."
+      }
+    },
+    {
+      "q": { "de": "Was kostet die Fehlerdiagnose?", "en": "How much does the diagnosis cost?" },
+      "a": {
+        "de": "Die Fehlerdiagnose für dein Samsung kostet ab {min.fehleranalyse} €. Danach weißt du, was kaputt ist und was die Reparatur kostet.",
+        "en": "Diagnostics for your Samsung start at {min.fehleranalyse} €. Afterwards you'll know what's broken and what the repair costs."
+      }
+    }
+  ],
+  "related": ["/handy-reparatur/", "/iphone-reparatur/", "/tablet-reparatur/", "/datenrettung/"]
+}

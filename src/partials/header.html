@@ -1,0 +1,31 @@
+<script>document.documentElement.classList.add("js")</script>
+<header class="site-header">
+  <div class="wrap header__inner">
+    <a class="brand" href="/" aria-label="{{site.name}}">
+      <img class="brand__mark" src="/assets/img/logo.svg" width="36" height="30" alt="">
+      <span class="brand__word">Mtech<span class="brand__accent">3land</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="{{t.nav.menu}}" data-i18n-attr="aria-label:nav.menu">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+    </button>
+    <nav class="nav" id="nav" aria-label="{{t.nav.label}}" data-i18n-attr="aria-label:nav.label">
+      <a href="/handy-reparatur/" data-i18n="nav.phone">{{{t.nav.phone}}}</a>
+      <a href="/tablet-reparatur/" data-i18n="nav.tablet">{{{t.nav.tablet}}}</a>
+      <a href="/laptop-reparatur/" data-i18n="nav.laptop">{{{t.nav.laptop}}}</a>
+      <a href="/playstation-reparatur/" data-i18n="nav.playstation">{{{t.nav.playstation}}}</a>
+      <a href="/#preise" data-i18n="nav.prices">{{{t.nav.prices}}}</a>
+      <a href="/ratgeber/" data-i18n="nav.guides">{{{t.nav.guides}}}</a>
+      <a href="/#kontakt" data-i18n="nav.contact">{{{t.nav.contact}}}</a>
+    </nav>
+    <div class="header__actions">
+      <button class="lang" id="langToggle" type="button">
+        <span class="sr-only" data-i18n="lang.switch">{{{t.lang.switch}}}</span>
+        <span class="lang__opt is-on" data-lang="de">DE</span><span class="lang__sep" aria-hidden="true">/</span><span class="lang__opt" data-lang="en">EN</span>
+      </button>
+      <a class="btn btn--wa header__wa" href="{{waHref}}" target="_blank" rel="noopener">
+        <svg class="ic" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+        <span data-i18n="cta.whatsapp">{{{t.cta.whatsapp}}}</span>
+      </a>
+    </div>
+  </div>
+</header>

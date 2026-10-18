@@ -1,0 +1,21 @@
+<section class="picker"{{{picker.idAttr}}} data-picker data-type="{{picker.type}}" data-brand="{{picker.brand}}" data-wa="{{site.wa}}">
+  <div data-picker-tools hidden>
+    <label class="picker__search">
+      <span class="sr-only" data-i18n="picker.search.label">{{{t.picker.search.label}}}</span>
+      <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>
+      <input type="search" data-picker-search placeholder="{{t.picker.search.ph}}" data-i18n-attr="placeholder:picker.search.ph" autocomplete="off" autocapitalize="off" spellcheck="false">
+    </label>
+  </div>
+  <div class="picker__panel" data-picker-panel>
+    <h3 class="h3" data-i18n="picker.heading.1">{{{t.picker.heading.1}}}</h3>
+    <ul class="tiles">
+      <li><a class="tile" href="/handy-reparatur/" data-key="t:handy"><svg class="ic" aria-hidden="true"><use href="#i-mobile"/></svg><span data-i18n="type.handy">{{{t.type.handy}}}</span></a></li>
+      <li><a class="tile" href="/tablet-reparatur/" data-key="t:tablet"><svg class="ic" aria-hidden="true"><use href="#i-tablet"/></svg><span data-i18n="type.tablet">{{{t.type.tablet}}}</span></a></li>
+      <li><a class="tile" href="/laptop-reparatur/" data-key="t:laptop"><svg class="ic" aria-hidden="true"><use href="#i-laptop"/></svg><span data-i18n="type.laptop">{{{t.type.laptop}}}</span></a></li>
+      <li><a class="tile" href="/playstation-reparatur/" data-key="t:playstation"><svg class="ic" aria-hidden="true"><use href="#i-gamepad"/></svg><span data-i18n="type.playstation">{{{t.type.playstation}}}</span></a></li>
+      <li><a class="tile" href="/apple-watch-reparatur/" data-key="t:smartwatch"><svg class="ic" aria-hidden="true"><use href="#i-watch"/></svg><span data-i18n="type.smartwatch">{{{t.type.smartwatch}}}</span></a></li>
+      <li><a class="tile" href="/fehlerdiagnose/" data-key="diagnose"><svg class="ic" aria-hidden="true"><use href="#i-stethoscope"/></svg><span data-i18n="repair.fehleranalyse">{{{t.repair.fehleranalyse}}}</span></a></li>
+    </ul>
+  </div>
+  <p class="sr-only" role="status" aria-live="polite" data-picker-status></p>
+</section>

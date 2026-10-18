@@ -1,0 +1,22 @@
+{
+  "origin": "https://mtech3land.com",
+  "name": "Mtech3land",
+  "legalName": "Mtech3land",
+  "street": "Hauptstraße 177",
+  "zip": "79576",
+  "city": "Weil am Rhein",
+  "phone": "+49 1575 3815179",
+  "phoneHref": "tel:+4915753815179",
+  "wa": "4915753815179",
+  "email": "mtech3land@gmail.com",
+  "mapsUrl": "https://maps.app.goo.gl/s4RJHQQgRoPSrcpd7",
+  "mapEmbed": "https://www.google.com/maps?q=Hauptstra%C3%9Fe%20177,%2079576%20Weil%20am%20Rhein&z=16&output=embed",
+  "hours": [
+    { "days": { "de": "Mo–Fr", "en": "Mon–Fri" }, "open": "12:30", "close": "19:00" },
+    { "days": { "de": "Sa", "en": "Sat" }, "open": "10:00", "close": "15:00" }
+  ],
+  "promo": {
+    "de": "Panzerglas wechseln 9,99 € · Handyreinigung gratis",
+    "en": "Screen protector fitted 9.99 € · free phone cleaning"
+  }
+}

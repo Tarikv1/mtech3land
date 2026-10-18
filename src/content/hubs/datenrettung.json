@@ -1,0 +1,57 @@
+{
+  "id": "datenrettung",
+  "path": "/datenrettung/",
+  "label": { "de": "Datenrettung", "en": "Data recovery" },
+  "title": { "de": "Datenrettung in Weil am Rhein, nahe Basel | Mtech3land" },
+  "description": { "de": "Datenrettung in Weil am Rhein, nahe Basel: Wir retten Fotos, Kontakte und Daten von defekten Handys, Tablets und Laptops. Diskret und vertraulich." },
+  "h1": { "de": "Datenrettung in Weil am Rhein", "en": "Data recovery in Weil am Rhein" },
+  "intro": {
+    "de": [
+      "Ein Wasserschaden, ein Sturz oder ein defektes Display – und plötzlich kommst du nicht mehr an deine Fotos, Kontakte und Nachrichten. In vielen Fällen sind die Daten aber noch da.",
+      "Wir prüfen dein Gerät und holen heraus, was zu retten ist – bei Smartphones, Tablets und Laptops. Alles läuft diskret und vertraulich, in unserem Laden in Weil am Rhein, nahe Basel."
+    ],
+    "en": [
+      "Water damage, a drop or a broken display – and suddenly you can't get to your photos, contacts and messages. In many cases, though, the data is still there.",
+      "We check your device and recover what can be saved – from smartphones, tablets and laptops. Everything stays discreet and confidential, in our shop in Weil am Rhein, near Basel."
+    ]
+  },
+  "services": [
+    { "de": "Fotos, Kontakte und Nachrichten von defekten Handys", "en": "Photos, contacts and messages from broken phones" },
+    { "de": "Daten von Tablets und Laptops", "en": "Data from tablets and laptops" },
+    { "de": "Nach Wasserschaden, Sturz oder defektem Display", "en": "After water damage, a drop or a broken display" },
+    { "de": "Diskret und vertraulich", "en": "Discreet and confidential" }
+  ],
+  "picker": null,
+  "models": null,
+  "faq": [
+    {
+      "q": { "de": "Was kostet eine Datenrettung?", "en": "How much does data recovery cost?" },
+      "a": {
+        "de": "Das hängt vom Aufwand ab. Die erste Einschätzung ist kostenlos. Den Preis besprechen wir mit dir, bevor wir anfangen.",
+        "en": "It depends on the effort. The first assessment is free. We agree the price with you before we start."
+      }
+    },
+    {
+      "q": { "de": "Kann man die Daten immer retten?", "en": "Can the data always be recovered?" },
+      "a": {
+        "de": "Nicht immer. In vielen Fällen sind die Daten aber noch da. Wir prüfen dein Gerät und sagen dir ehrlich, was möglich ist.",
+        "en": "Not always. In many cases, though, the data is still there. We check your device and tell you honestly what's possible."
+      }
+    },
+    {
+      "q": { "de": "Wie geht ihr mit meinen Daten um?", "en": "How do you handle my data?" },
+      "a": {
+        "de": "Diskret und vertraulich. Hast du Fragen dazu, sprich uns einfach im Laden an.",
+        "en": "Discreetly and confidentially. If you have any questions about it, just ask us in the shop."
+      }
+    },
+    {
+      "q": { "de": "Kann ich mein Gerät gleich dalassen?", "en": "Can I leave my device with you?" },
+      "a": {
+        "de": "Ja. Bring es während der Öffnungszeiten vorbei: {hours}. Wir sagen dir dann, wie es weitergeht.",
+        "en": "Yes. Bring it in during opening hours: {hours}. We'll then tell you what happens next."
+      }
+    }
+  ],
+  "related": ["/fehlerdiagnose/", "/handy-reparatur/", "/tablet-reparatur/", "/laptop-reparatur/"]
+}

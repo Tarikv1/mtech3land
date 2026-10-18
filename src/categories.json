@@ -1,0 +1,66 @@
+{
+  "types": {
+    "handy": { "labelKey": "type.handy", "hub": "/handy-reparatur/" },
+    "tablet": { "labelKey": "type.tablet", "hub": "/tablet-reparatur/" },
+    "laptop": { "labelKey": "type.laptop", "hub": "/laptop-reparatur/" },
+    "playstation": { "labelKey": "type.playstation", "hub": "/playstation-reparatur/" },
+    "smartwatch": { "labelKey": "type.smartwatch", "hub": "/apple-watch-reparatur/" }
+  },
+  "parents": {
+    "iphone": { "url": "/iphone-reparatur/", "labelKey": "parent.iphone" },
+    "samsung": { "url": "/samsung-reparatur/", "labelKey": "parent.samsung" },
+    "handy": { "url": "/handy-reparatur/", "labelKey": "parent.handy" },
+    "ipad": { "url": "/ipad-reparatur/", "labelKey": "parent.ipad" },
+    "macbook": { "url": "/macbook-reparatur/", "labelKey": "parent.macbook" },
+    "laptop": { "url": "/laptop-reparatur/", "labelKey": "parent.laptop" },
+    "playstation": { "url": "/playstation-reparatur/", "labelKey": "parent.playstation" }
+  },
+  "groups": {
+    "iPhone": { "type": "handy", "brand": "apple", "parent": "iphone" },
+    "Samsung": { "type": "handy", "brand": "samsung", "parent": "samsung" },
+    "Google": { "type": "handy", "brand": "google", "parent": "handy" },
+    "Huawei": { "type": "handy", "brand": "huawei", "parent": "handy" },
+    "iPad": { "type": "tablet", "brand": "apple", "parent": "ipad" },
+    "MacBook": { "type": "laptop", "brand": "apple", "parent": "macbook" },
+    "Notebook": { "type": "laptop", "brand": "microsoft", "parent": "laptop" },
+    "Spielekonsole": { "type": "playstation", "brand": "sony", "parent": "playstation" },
+    "Watch": { "type": "smartwatch", "brand": "apple", "parent": null, "pageUrl": "/apple-watch-reparatur/" }
+  },
+  "brands": { "apple": "Apple", "samsung": "Samsung", "google": "Google", "huawei": "Huawei", "microsoft": "Microsoft", "sony": "Sony" },
+  "extras": { "playstation": ["laufwerk", "luefter"], "laptop": ["komponentenwechsel"] },
+  "coreRepairs": {
+    "handy": ["display", "akku", "ladebuchse"],
+    "tablet": ["display", "akku", "ladebuchse"],
+    "laptop": ["display", "akku", "tastatur"],
+    "playstation": ["hdmi-anschluss", "grundreinigung"],
+    "smartwatch": ["display", "akku"]
+  },
+  "repairPriority": {
+    "display": 1,
+    "display-original-irp": 1.5,
+    "display-original": 1.5,
+    "lcd": 2,
+    "displayglas": 3,
+    "digitizer-glas": 3,
+    "akku": 4,
+    "akku-original-irp": 4.5,
+    "akku-original": 4.5,
+    "ladebuchse": 5,
+    "main-kamera": 6,
+    "front-kamera": 7,
+    "kameraglas": 8,
+    "backcover": 9,
+    "wasserschaden": 10,
+    "tastatur": 11,
+    "trackpad": 12,
+    "touchbar": 13,
+    "hdmi-anschluss": 14,
+    "netzteil": 15,
+    "hoermuschel": 16,
+    "grundreinigung": 17,
+    "fehleranalyse": 30,
+    "laufwerk": 40,
+    "luefter": 40,
+    "komponentenwechsel": 40
+  }
+}

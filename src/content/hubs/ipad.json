@@ -1,0 +1,58 @@
+{
+  "id": "ipad",
+  "path": "/ipad-reparatur/",
+  "label": { "de": "iPad-Reparatur", "en": "iPad repair" },
+  "title": { "de": "iPad-Reparatur in Weil am Rhein, nahe Basel | Mtech3land" },
+  "description": { "de": "iPad-Reparatur in Weil am Rhein, nahe Basel: Displayglas ab {min.displayglas} €, LCD ab {min.lcd} €, Akku ab {min.akku} €. Für iPad, Air, mini und Pro." },
+  "h1": { "de": "iPad-Reparatur in Weil am Rhein", "en": "iPad repair in Weil am Rhein" },
+  "intro": {
+    "de": [
+      "Ein gesprungenes iPad-Display ist schnell passiert – und ärgerlich. Wir reparieren dein iPad in unserem Laden in Weil am Rhein, nahe Basel.",
+      "Wir tauschen Glas und LCD, wechseln Akkus und reparieren Ladebuchsen für die ganze iPad-Familie: iPad, iPad Air, iPad mini und iPad Pro. Sag uns dein Modell per WhatsApp oder such es direkt im Preisfinder."
+    ],
+    "en": [
+      "A cracked iPad display can happen in a second – and it's annoying. We repair your iPad in our shop in Weil am Rhein, near Basel.",
+      "We replace glass and LCD, swap batteries and repair charging ports for the whole iPad family: iPad, iPad Air, iPad mini and iPad Pro. Tell us your model on WhatsApp, or look it up right in the price finder."
+    ]
+  },
+  "services": [
+    { "de": "Displayglas, wenn nur das Glas gesprungen ist", "en": "Display glass when only the glass is cracked" },
+    { "de": "LCD oder komplettes Display", "en": "LCD or the complete display" },
+    { "de": "Akkutausch, wenn das iPad schnell leer ist", "en": "Battery replacement when your iPad drains fast" },
+    { "de": "Ladebuchse, wenn das iPad nicht mehr lädt", "en": "Charging port when your iPad won't charge" },
+    { "de": "Wasserschaden und Fehlerdiagnose", "en": "Water damage and diagnostics" }
+  ],
+  "picker": { "type": "tablet", "brand": "apple" },
+  "models": { "parents": ["ipad"], "extra": [] },
+  "faq": [
+    {
+      "q": { "de": "Was kostet ein neues Displayglas fürs iPad?", "en": "How much is new display glass for an iPad?" },
+      "a": {
+        "de": "Je nach Modell ab {min.displayglas} €. Den genauen Preis für dein iPad zeigt dir der Preisfinder auf dieser Seite.",
+        "en": "Depending on the model, from {min.displayglas} €. The price finder on this page shows the exact price for your iPad."
+      }
+    },
+    {
+      "q": { "de": "Ich weiß nicht, welches iPad ich habe. Was nun?", "en": "I don't know which iPad I have. What now?" },
+      "a": {
+        "de": "Auf der Rückseite steht eine Modellnummer, zum Beispiel A2602. Gib sie in die Suche im Preisfinder ein, dann findest du dein iPad.",
+        "en": "There's a model number on the back, for example A2602. Type it into the price finder's search and you'll find your iPad."
+      }
+    },
+    {
+      "q": { "de": "Was kostet ein neuer Akku fürs iPad?", "en": "How much is a new iPad battery?" },
+      "a": {
+        "de": "Je nach Modell ab {min.akku} €. Was es bei deinem Modell kostet, siehst du in seiner Preisliste.",
+        "en": "Depending on the model, from {min.akku} €. Your model's price list shows the exact price."
+      }
+    },
+    {
+      "q": { "de": "Kann ich mein iPad gleich dalassen?", "en": "Can I leave my iPad with you?" },
+      "a": {
+        "de": "Ja. Bring es einfach während der Öffnungszeiten vorbei: {hours}. Nach der Diagnose sagen wir dir, wann es fertig ist.",
+        "en": "Yes. Just bring it in during opening hours: {hours}. After the diagnosis we'll tell you when it's ready."
+      }
+    }
+  ],
+  "related": ["/tablet-reparatur/", "/iphone-reparatur/", "/macbook-reparatur/", "/datenrettung/"]
+}
