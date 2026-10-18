@@ -1,0 +1,47 @@
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <div class="foot__brand">
+      <a class="brand" href="/" aria-label="{{site.name}}">
+        <img class="brand__mark" src="/assets/img/logo.svg" width="36" height="30" alt="">
+        <span class="brand__word">Mtech<span class="brand__accent">3land</span></span>
+      </a>
+      <p data-i18n="foot.tag">{{{t.foot.tag}}}</p>
+    </div>
+    <div class="foot__col">
+      <span class="foot__h" data-i18n="foot.contact">{{{t.foot.contact}}}</span>
+      <address class="foot__links">
+        <a href="{{site.mapsUrl}}" target="_blank" rel="noopener">
+          <svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>
+          <span>{{site.street}}, {{site.zip}} {{site.city}}</span>
+        </a>
+        <a href="{{site.phoneHref}}">
+          <svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>
+          <span>{{site.phone}}</span>
+        </a>
+        <a href="{{waHref}}" target="_blank" rel="noopener">
+          <svg class="ic" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+          <span data-i18n="cta.whatsapp">{{{t.cta.whatsapp}}}</span>
+        </a>
+      </address>
+    </div>
+    <div class="foot__col">
+      <span class="foot__h" data-i18n="contact.hours">{{{t.contact.hours}}}</span>
+      <ul class="hours">
+        {{{hoursHtml}}}
+      </ul>
+    </div>
+    <div class="foot__col">
+      <span class="foot__h" data-i18n="foot.legal">{{{t.foot.legal}}}</span>
+      <div class="foot__links">
+        <a href="/impressum/" data-i18n="foot.imprint">{{{t.foot.imprint}}}</a>
+        <a href="/datenschutz/" data-i18n="foot.privacy">{{{t.foot.privacy}}}</a>
+      </div>
+    </div>
+  </div>
+  <div class="foot__bar">
+    <div class="wrap foot__bar-inner">
+      <span>© {{site.name}}</span>
+      <span data-i18n="foot.rights">{{{t.foot.rights}}}</span>
+    </div>
+  </div>
+</footer>

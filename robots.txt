@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://mtech3land.com/sitemap.xml

@@ -1,0 +1,58 @@
+{
+  "id": "playstation",
+  "path": "/playstation-reparatur/",
+  "label": { "de": "PlayStation-Reparatur", "en": "PlayStation repair" },
+  "title": { "de": "PlayStation-Reparatur (PS4 & PS5) Weil am Rhein | Mtech3land" },
+  "description": { "de": "PS4- und PS5-Reparatur in Weil am Rhein: HDMI-Anschluss ab {min.hdmi-anschluss} €, Reinigung ab {min.grundreinigung} €. Auch Laufwerk, Lüfter und Überhitzung." },
+  "h1": { "de": "PlayStation-Reparatur in Weil am Rhein", "en": "PlayStation repair in Weil am Rhein" },
+  "intro": {
+    "de": [
+      "Kein Bild mehr, die Konsole wird heiß oder der Lüfter ist laut? Wir reparieren PlayStation 4 und PlayStation 5 – in unserem Laden in Weil am Rhein, direkt an der Grenze zu Basel.",
+      "Ist der HDMI-Anschluss kaputt, tauschen wir ihn aus. Wird die Konsole zu heiß, reinigen wir sie und kümmern uns um den Lüfter. Auch beim Laufwerk helfen wir dir. Für alle anderen Defekte machen wir zuerst eine Fehlerdiagnose."
+    ],
+    "en": [
+      "No picture, the console runs hot or the fan is loud? We repair the PlayStation 4 and PlayStation 5 – in our shop in Weil am Rhein, right on the border with Basel.",
+      "If the HDMI port is broken, we replace it. If the console overheats, we clean it and take care of the fan. We can help with the disc drive, too. For any other fault we start with a diagnosis."
+    ]
+  },
+  "services": [
+    { "de": "HDMI-Anschluss, wenn kein Bild mehr kommt", "en": "HDMI port when there's no picture" },
+    { "de": "Laufwerk, wenn Discs nicht mehr gelesen werden", "en": "Disc drive when discs won't read" },
+    { "de": "Lüfter und Überhitzung: Wir reinigen die Konsole und prüfen den Lüfter", "en": "Fan and overheating: we clean the console and check the fan" },
+    { "de": "Netzteil, wenn die Konsole nicht mehr angeht", "en": "Power supply when the console won't switch on" },
+    { "de": "Weitere Defekte nach einer Fehlerdiagnose", "en": "Other faults after a diagnosis" }
+  ],
+  "picker": { "type": "playstation", "brand": null },
+  "models": { "parents": ["playstation"], "extra": [] },
+  "faq": [
+    {
+      "q": { "de": "Meine PlayStation zeigt kein Bild. Woran liegt das?", "en": "My PlayStation shows no picture. What's wrong?" },
+      "a": {
+        "de": "Das kann am HDMI-Anschluss liegen, aber auch eine andere Ursache haben. Wir prüfen die Konsole und sagen dir, was kaputt ist. Der Tausch des HDMI-Anschlusses kostet ab {min.hdmi-anschluss} €.",
+        "en": "It can be the HDMI port, but there can be another cause. We check the console and tell you what's broken. Replacing the HDMI port starts at {min.hdmi-anschluss} €."
+      }
+    },
+    {
+      "q": { "de": "Meine Konsole wird heiß und der Lüfter ist laut. Was tun?", "en": "My console gets hot and the fan is loud. What should I do?" },
+      "a": {
+        "de": "Bring sie zu uns. Wir reinigen die Konsole und prüfen den Lüfter. Die Reinigung gibt es ab {min.grundreinigung} €.",
+        "en": "Bring it to us. We clean the console and check the fan. Cleaning starts at {min.grundreinigung} €."
+      }
+    },
+    {
+      "q": { "de": "Was kostet die Fehlerdiagnose?", "en": "How much does the diagnosis cost?" },
+      "a": {
+        "de": "Die Fehlerdiagnose für deine PlayStation kostet ab {min.fehleranalyse} €. Danach weißt du, was kaputt ist und was die Reparatur kostet.",
+        "en": "Diagnostics for your PlayStation start at {min.fehleranalyse} €. Afterwards you'll know what's broken and what the repair costs."
+      }
+    },
+    {
+      "q": { "de": "Kann ich meine PlayStation gleich dalassen?", "en": "Can I leave my PlayStation with you?" },
+      "a": {
+        "de": "Ja. Bring sie einfach während der Öffnungszeiten vorbei: {hours}. Nach der Diagnose sagen wir dir, wann sie fertig ist.",
+        "en": "Yes. Just bring it in during opening hours: {hours}. After the diagnosis we'll tell you when it's ready."
+      }
+    }
+  ],
+  "related": ["/fehlerdiagnose/", "/handy-reparatur/", "/laptop-reparatur/"]
+}

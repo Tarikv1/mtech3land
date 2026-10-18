@@ -1,0 +1,58 @@
+{
+  "id": "tablet",
+  "path": "/tablet-reparatur/",
+  "label": { "de": "Tablet-Reparatur", "en": "Tablet repair" },
+  "title": { "de": "Tablet-Reparatur in Weil am Rhein, nahe Basel | Mtech3land" },
+  "description": { "de": "Tablet-Reparatur in Weil am Rhein: Displaytausch, Akku und technische Fehler. iPad-Displayglas ab {min.displayglas} €, Akku ab {min.akku} €. Nahe Basel." },
+  "h1": { "de": "Tablet-Reparatur in Weil am Rhein", "en": "Tablet repair in Weil am Rhein" },
+  "intro": {
+    "de": [
+      "Glas gesprungen, Akku schwach oder das Tablet lädt nicht mehr? Wir reparieren Tablets in unserem Laden in Weil am Rhein, nahe Basel.",
+      "Die Preise für iPad, iPad Air, iPad mini und iPad Pro findest du hier nach Modell sortiert. Bei technischen Fehlern machen wir zuerst eine Diagnose und sagen dir dann, was kaputt ist. Dein Microsoft Surface findest du bei der Laptop-Reparatur."
+    ],
+    "en": [
+      "Cracked glass, weak battery or your tablet won't charge? We repair tablets in our shop in Weil am Rhein, near Basel.",
+      "Here you'll find the prices for iPad, iPad Air, iPad mini and iPad Pro, model by model. For technical faults we start with a diagnosis and then tell you what's broken. You'll find your Microsoft Surface under laptop repair."
+    ]
+  },
+  "services": [
+    { "de": "Displaytausch: nur das Glas oder das komplette Display", "en": "Screen replacement: just the glass or the complete display" },
+    { "de": "Akkutausch, wenn das Tablet schnell leer ist", "en": "Battery replacement when your tablet drains fast" },
+    { "de": "Ladebuchse, wenn das Tablet nicht mehr lädt", "en": "Charging port when your tablet won't charge" },
+    { "de": "Technische Fehler und Wasserschaden", "en": "Technical faults and water damage" },
+    { "de": "Fehlerdiagnose, wenn du nicht weißt, was kaputt ist", "en": "Diagnostics when you don't know what's broken" }
+  ],
+  "picker": { "type": "tablet", "brand": null },
+  "models": { "parents": ["ipad"], "extra": [] },
+  "faq": [
+    {
+      "q": { "de": "Muss immer das ganze Display getauscht werden?", "en": "Does the whole display always need replacing?" },
+      "a": {
+        "de": "Nicht immer. Bei manchen iPads tauschen wir nur das Displayglas, das gibt es ab {min.displayglas} €. Welche Reparatur zu deinem Modell passt, siehst du in seiner Preisliste.",
+        "en": "Not always. On some iPads we replace only the display glass, from {min.displayglas} €. Your model's price list shows which repair fits it."
+      }
+    },
+    {
+      "q": { "de": "Repariert ihr auch andere Tablets?", "en": "Do you repair other tablets too?" },
+      "a": {
+        "de": "Dein Microsoft Surface findest du bei der Laptop-Reparatur. Für andere Marken schreib uns kurz per WhatsApp, welches Modell du hast. Wir sagen dir dann, ob wir helfen können.",
+        "en": "You'll find the Microsoft Surface under laptop repair. For other brands, send us a quick WhatsApp message with your model and we'll tell you whether we can help."
+      }
+    },
+    {
+      "q": { "de": "Wie lange dauert eine Tablet-Reparatur?", "en": "How long does a tablet repair take?" },
+      "a": {
+        "de": "Das hängt vom Modell und vom Schaden ab. Nach der Diagnose sagen wir dir, wie lange es dauert.",
+        "en": "It depends on the model and the damage. After the diagnosis we'll tell you how long it takes."
+      }
+    },
+    {
+      "q": { "de": "Kann ich mein Tablet gleich dalassen?", "en": "Can I leave my tablet with you?" },
+      "a": {
+        "de": "Ja. Bring es einfach während der Öffnungszeiten vorbei: {hours}. Nach der Diagnose sagen wir dir, wann du es abholen kannst.",
+        "en": "Yes. Just bring it in during opening hours: {hours}. After the diagnosis we'll tell you when you can pick it up."
+      }
+    }
+  ],
+  "related": ["/ipad-reparatur/", "/handy-reparatur/", "/laptop-reparatur/", "/datenrettung/"]
+}
