@@ -283,7 +283,7 @@ test("page content: h1, model numbers, badges, faq, contact", () => {
   assert.ok(!iphone.includes("Dauer nach Diagnose"));
   assert.ok(mac.includes("Dauer nach Diagnose") && !mac.includes("Oft in 30 Min."));
   assert.equal([...iphone.matchAll(/<details>/g)].length, 4);
-  assert.ok(iphone.includes(site.street) && iphone.includes(site.phoneHref) && iphone.includes("12:30"));
+  assert.ok(iphone.includes(site.street) && iphone.includes(site.phoneHref) && iphone.includes(`${site.hours[0].open}–${site.hours[0].close}`));
   const noCodes = devices.find((d) => d.codes.length === 0);
   assert.ok(!text(html(noCodes)).includes("Modellnummern"), `${noCodes.url}: codes line without codes`);
 });

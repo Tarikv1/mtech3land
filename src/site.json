@@ -12,7 +12,7 @@
   "mapsUrl": "https://maps.app.goo.gl/s4RJHQQgRoPSrcpd7",
   "mapEmbed": "https://www.google.com/maps?q=Hauptstra%C3%9Fe%20177,%2079576%20Weil%20am%20Rhein&z=16&output=embed",
   "hours": [
-    { "days": { "de": "Mo–Fr", "en": "Mon–Fri" }, "open": "12:30", "close": "19:00" },
+    { "days": { "de": "Mo–Fr", "en": "Mon–Fri" }, "open": "10:00", "close": "19:00" },
     { "days": { "de": "Sa", "en": "Sat" }, "open": "10:00", "close": "15:00" }
   ],
   "promo": {
