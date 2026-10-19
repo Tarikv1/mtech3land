@@ -27,8 +27,8 @@
     {
       "q": { "de": "Was kostet eine Datenrettung?", "en": "How much does data recovery cost?" },
       "a": {
-        "de": "Das hängt vom Aufwand ab. Die erste Einschätzung ist kostenlos. Den Preis besprechen wir mit dir, bevor wir anfangen.",
-        "en": "It depends on the effort. The first assessment is free. We agree the price with you before we start."
+        "de": "Das hängt vom Aufwand ab. Die Diagnose kostet ab {min.fehleranalyse} €. Den Preis für die Datenrettung besprechen wir mit dir, bevor wir anfangen.",
+        "en": "It depends on the effort. Diagnostics start at {min.fehleranalyse} €. We agree the price for the data recovery with you before we start."
       }
     },
     {
