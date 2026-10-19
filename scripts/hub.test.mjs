@@ -100,6 +100,14 @@ test("diagnose price derived", () => {
   assert.ok(titleOf(h).includes(`ab ${min} €`));
 });
 
+test("data recovery first check is not free", () => {
+  // client 2026-10-19: every check is paid (diagnosis from the lowest Fehlerdiagnose price)
+  const min = Math.min(...prices.devices.flatMap((d) => d.repairs).filter((r) => r.slug === "fehleranalyse" && r.price != null).map((r) => r.price));
+  const h = html(HUBS.datenrettung.path);
+  assert.ok(!/kostenlos|gratis|\bfree\b/i.test(h), "no free-check promise on /datenrettung/");
+  assert.ok(text(mainOf(h)).includes(`ab ${min} €`), `main text needs "ab ${min} €"`);
+});
+
 const servicesOf = (h) => text(mainOf(h).match(/<ul class="checks">([\s\S]*?)<\/ul>/)[1]);
 
 test("client services present", () => {
