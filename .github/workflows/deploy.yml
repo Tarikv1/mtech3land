@@ -2,20 +2,17 @@ name: Build and deploy
 
 # push to main  -> tests, build _site/, deploy to GitHub Pages
 # pull request  -> tests and build only (no deploy)
-# daily 04:17   -> sync Google rating + review count (commits only reviews.json), then tests, build, deploy
-# Only _site/ is published. Without GOOGLE_PLACES_API_KEY the scheduled run fails red (intended);
-# content deploys on push are not affected.
+# manual run    -> same as push (redeploy)
+# Only _site/ is published. Google rating + review count are updated by hand in assets/data/reviews.json.
 
 on:
   push:
     branches: [main]
   pull_request:
-  schedule:
-    - cron: "17 4 * * *"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -24,45 +21,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  sync:
-    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v7
-
-      - uses: actions/setup-node@v7
-        with:
-          node-version: 22
-
-      - name: Fetch rating and review count from Google Places
-        env:
-          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
-          GOOGLE_PLACE_ID: ${{ vars.GOOGLE_PLACE_ID }}
-        run: node scripts/update-reviews.mjs
-
-      - name: Commit reviews.json if it changed
-        run: |
-          if [ -z "$(git status --porcelain assets/data/reviews.json)" ]; then
-            echo "No change."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/data/reviews.json
-          git commit -m "chore: sync Google rating and review count"
-          git push
-
   build:
-    needs: sync
-    if: always() && (needs.sync.result == 'success' || needs.sync.result == 'skipped')
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v7
-        with:
-          # after a sync commit the branch tip holds the new reviews.json
-          ref: ${{ github.event_name == 'pull_request' && github.sha || github.ref }}
 
       - uses: actions/setup-node@v7
         with:
@@ -84,7 +47,6 @@ jobs:
 
   deploy:
     needs: build
-    # explicit status check: on push `sync` is skipped, and an implicit success() would skip deploy too
     if: ${{ !cancelled() && needs.build.result == 'success' && github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10

@@ -90,34 +90,7 @@ test("stubs redirect to new urls", () => {
   assert.ok(macbook.includes('<a href="/laptop-reparatur/"'));
 });
 
-function mainText(html) {
-  const m = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/);
-  assert.ok(m, "no <main>");
-  return m[1].replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
-}
-
-// The last commit of the pre-redesign site; main moves to the new site once the redesign is merged.
-const OLD_SITE = "d099701";
-function gitOld(file) {
-  try {
-    return execFileSync("git", ["show", `${OLD_SITE}:${file}`], { cwd: root, encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] });
-  } catch {
-    return null; // shallow clone without that commit
-  }
-}
-
-test("legal text unchanged", (t) => {
-  const dir = tmp();
-  build({ root, outDir: dir, quiet: true });
-  for (const file of ["impressum/index.html", "datenschutz/index.html"]) {
-    const old = gitOld(file);
-    if (old === null) return t.skip(`git commit ${OLD_SITE} not available`);
-    const text = mainText(read(dir, file));
-    assert.ok(text.length > 300, `${file} text too short`);
-    assert.equal(text, mainText(old), `${file} legal text changed`);
-  }
-});
-
+// Impressum and Datenschutz content is checked in legal.test.mjs.
 test("nojekyll present", () => {
   assert.ok(fs.existsSync(path.join(root, ".nojekyll")));
 });

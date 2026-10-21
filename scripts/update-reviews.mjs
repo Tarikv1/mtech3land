@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Refreshes assets/data/reviews.json (Google rating + review count) from the Places API (New).
-// The generator injects that file into the site, so run `node scripts/build.mjs` afterwards;
-// the GitHub Action .github/workflows/deploy.yml does both daily (sync job, then build + deploy).
+// The generator injects that file into the site, so run `node scripts/build.mjs` afterwards.
+// Optional and manual: CI does not run it; editing reviews.json by hand works just as well (see README).
 //
 //   node scripts/update-reviews.mjs
 //

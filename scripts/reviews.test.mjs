@@ -231,28 +231,23 @@ const pos = (text, needle) => {
 
 test("deploy workflow triggers and permissions", () => {
   const yml = workflow();
-  for (const needle of ["branches: [main]", "pull_request:", 'cron: "17 4 * * *"', "workflow_dispatch:", "pages: write", "id-token: write", "contents: write"]) pos(yml, needle);
-  for (const job of ["sync", "build", "deploy"]) assert.match(jobText(yml, job), /^    timeout-minutes: 10$/m, `${job} has a 10 minute timeout`);
+  for (const needle of ["branches: [main]", "pull_request:", "workflow_dispatch:", "pages: write", "id-token: write"]) pos(yml, needle);
+  for (const job of ["build", "deploy"]) assert.match(jobText(yml, job), /^    timeout-minutes: 10$/m, `${job} has a 10 minute timeout`);
 });
 
-test("sync only on schedule and dispatch, commits only reviews.json", () => {
+test("no review automation: no schedule, no sync job, CI never commits", () => {
+  // decided 2026-10-21: the Google review count is updated by hand in assets/data/reviews.json
   const yml = workflow();
-  const sync = jobText(yml, "sync");
-  pos(sync, "if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'");
-  assert.ok(pos(sync, "node scripts/update-reviews.mjs") < pos(sync, "git status --porcelain assets/data/reviews.json"));
-  assert.ok(pos(sync, "git add assets/data/reviews.json") < pos(sync, "git commit") && pos(sync, "git commit") < pos(sync, "git push"));
-  pos(sync, "chore: sync Google rating and review count");
-  assert.ok(!yml.includes("git add -A"), "only reviews.json is ever committed by CI");
-  const run = pos(sync, "node scripts/update-reviews.mjs");
-  const fetchStep = sync.slice(sync.lastIndexOf("- name:", run), sync.indexOf("- name:", run));
-  assert.ok(!/continue-on-error|\|\| true|\bif:/.test(fetchStep), "the fetch step must be allowed to fail the run");
+  assert.ok(!/^\s*schedule:/m.test(yml), "no scheduled runs");
+  assert.ok(!yml.includes("\n  sync:\n"), "no sync job");
+  assert.ok(!yml.includes("update-reviews.mjs"), "the workflow does not fetch reviews");
+  assert.ok(!/git (commit|push)/.test(yml), "CI never commits");
+  assert.ok(!yml.includes("contents: write"), "read-only repository access is enough");
 });
 
-test("build checks out the branch tip after sync", () => {
+test("build runs on its own", () => {
   const build = jobText(workflow(), "build");
-  pos(build, "needs: sync");
-  pos(build, "if: always() && (needs.sync.result == 'success' || needs.sync.result == 'skipped')");
-  pos(build, "ref: ${{ github.event_name == 'pull_request' && github.sha || github.ref }}");
+  assert.ok(!build.includes("needs:"), "build has no upstream job");
 });
 
 test("tests gate the build and deploy runs only on main", () => {
@@ -266,7 +261,6 @@ test("tests gate the build and deploy runs only on main", () => {
   pos(build, "path: _site");
   const deploy = jobText(yml, "deploy");
   pos(deploy, "needs: build");
-  // sync is skipped on push; without an explicit status check the skip would propagate and deploy would never run
   pos(deploy, "if: ${{ !cancelled() && needs.build.result == 'success' && github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}");
   pos(deploy, "name: github-pages");
   pos(deploy, "actions/deploy-pages@v5");

@@ -151,6 +151,7 @@ ${pt("p", "page.rev.lede", ' class="lede"')}
 <div class="reviews">
 ${quotes.join("\n")}
 </div>
+${tr("p", "home.rev.note", ' class="prose__note"')}
 <p><a class="btn btn--ghost" href="${esc(site.mapsUrl)}" target="_blank" rel="noopener">${tr("span", "home.rev.all")}</a></p>`;
 
   const faq = `${tr("h2", "model.faq.title", ' class="h2"')}
