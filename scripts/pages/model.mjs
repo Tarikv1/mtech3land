@@ -188,7 +188,6 @@ export function modelPages(ctx) {
     const badge = (icon, key) => `<li class="badge"><svg class="ic" aria-hidden="true"><use href="#i-${icon}"/></svg>${tr("span", key)}</li>`;
     const badges = [
       d.type === "handy" ? badge("bolt", "model.badge.fast") : badge("clock", "model.badge.diag"),
-      badge("shield", "model.badge.warranty"),
       badge("whatsapp", "model.badge.wa"),
     ];
 

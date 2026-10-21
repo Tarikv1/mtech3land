@@ -27,7 +27,7 @@ Change the source, run `node scripts/build.mjs`, run the tests, commit.
 | Device groups and repair types | `src/categories.json` |
 | Prices | `assets/data/prices.json` (`price: null` shows "auf Anfrage") |
 | Newest-first model order in the picker | `src/model-order.json` (written by the price refresh) |
-| Google rating and review count | `assets/data/reviews.json` (written by the review sync) |
+| Google rating and review count | `assets/data/reviews.json` (updated by hand, see below) |
 | Colours, fonts, layout | `assets/css/styles.css` |
 | Logo, photos | `assets/img/` |
 
@@ -38,30 +38,23 @@ Neue Modelle und Preise kommen über ein internes Werkzeug außerhalb dieses Rep
 `.github/workflows/deploy.yml` publishes the site. GitHub Pages must be set to **Source: GitHub Actions** (Settings → Pages); the custom domain `mtech3land.com` and HTTPS stay as they are.
 - Pull request: tests + build only.
 - Push to `main`: tests → `node scripts/build.mjs --out _site` → upload `_site/` → deploy.
-- Daily 04:17 UTC (and "Run workflow"): review sync first (below), then tests → build → deploy.
+- "Run workflow" (manual): same as a push, redeploys `main`.
 
 Only `_site/` reaches the website — never `src/`, `scripts/`, `assets/data/prices.json` or this README.
 
 Rollback: revert the faulty commit on `main` and push (the workflow redeploys the previous state). Emergency fallback to the old branch-based hosting: revert to a commit that still contains the generated pages and switch Settings → Pages back to "Deploy from a branch: main / (root)".
 
-## Activate review sync
-The rating and review count come from `assets/data/reviews.json`. The build puts them into the trust strip, the reviews section, the meta description and the `aggregateRating` of the home page.
+## Update the Google rating
+The rating and review count come from `assets/data/reviews.json`. The build puts them into the trust strip, the reviews section, the meta description and the `aggregateRating` of the home page. They are updated by hand; nothing syncs them automatically.
 
-The `sync` job of `deploy.yml` runs daily at 04:17 UTC: it asks the Google Places API for the current numbers and commits `reviews.json` if they changed; the same run then rebuilds and deploys the site. Without the API key the script prints an error and exits 1, so the scheduled run is **red until the key exists** (content deploys on push are not affected). That is intended: a green run must mean the numbers were checked.
+1. Look up the current rating and count on the Google Business Profile.
+2. Edit `rating` (one decimal, e.g. `5.0`), `count`, `updated` and `checked` (`YYYY-MM-DD`) in `assets/data/reviews.json`.
+3. Open a pull request; merging it to `main` runs the tests and deploys.
 
-One-time setup:
-1. Google Cloud Console → new project → attach a billing account (one request per day stays within Google's free monthly usage).
-2. Enable "Places API (New)".
-3. Credentials → Create API key → restrict it to Places API (New).
-4. `gh secret set GOOGLE_PLACES_API_KEY -R Tarikv1/mtech3land` (paste the key when prompted).
+Optional: `GOOGLE_PLACES_API_KEY=… node scripts/update-reviews.mjs` fetches the numbers from the Places API (New) locally. Never put the key into the repo.
 
-Check: `gh secret list -R Tarikv1/mtech3land` shows `GOOGLE_PLACES_API_KEY`. Then run the workflow once: `gh workflow run deploy.yml -R Tarikv1/mtech3land`.
-
-GitHub disables scheduled workflows after 60 days without repository activity. If that happens, re-enable the sync with `gh workflow enable deploy.yml -R Tarikv1/mtech3land`.
-
-Never put the key into the repo. If the business ever moves to a new Google listing, set the repository variable `GOOGLE_PLACE_ID`; the default place ID is in `scripts/update-reviews.mjs`.
-
-Without the key you can edit `rating` (one decimal, e.g. `5.0`) and `count` in `assets/data/reviews.json` by hand, then `node scripts/build.mjs` and commit.
+## Legal pages
+`src/pages/impressum.html` and `src/pages/datenschutz.html` were reviewed on 2026-10-21. `scripts/legal.test.mjs` pins the mandatory points. Update the Datenschutz whenever the site adds a new external service (fonts, maps, analytics, forms, embeds). The review note next to the Google reviews (§ 5b Abs. 3 UWG) must stay.
 
 ## Fonts / licensing
 Saira and IBM Plex Sans are self-hosted (`assets/fonts/`), both SIL Open Font License, free for commercial use. The Google Maps embed loads only on the visitor's click. The logo mark is an original SVG.

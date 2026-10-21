@@ -36,15 +36,21 @@
     document.documentElement.setAttribute("lang", state.lang);
   }
 
-  function setLang(l) {
+  // shows language l; nothing is stored (page load)
+  function applyLang(l) {
     if (l !== "de" && l !== "en") l = "de";
     state.lang = l;
-    try { localStorage.setItem("mt_lang", l); } catch (e) {}
     document.querySelectorAll(".lang__opt").forEach(function (o) {
       o.classList.toggle("is-on", o.getAttribute("data-lang") === l);
     });
     applyStatic();
     window.dispatchEvent(new CustomEvent("mt:lang", { detail: l }));
+  }
+
+  // the visitor chose a language: show it and remember it (Datenschutz section 6)
+  function setLang(l) {
+    applyLang(l);
+    try { localStorage.setItem("mt_lang", state.lang); } catch (e) {}
   }
 
   window.MT = {
@@ -57,7 +63,7 @@
     var saved;
     try { saved = localStorage.getItem("mt_lang"); } catch (e) {}
     if (saved !== "de" && saved !== "en") saved = "de"; // German market → DE default
-    setLang(saved);
+    applyLang(saved);
 
     var toggle = document.getElementById("langToggle");
     if (toggle) toggle.addEventListener("click", function () {

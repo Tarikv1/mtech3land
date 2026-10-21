@@ -287,6 +287,8 @@ html[lang="de"] .lang-note{display:none}
 .trust > *{display:inline-flex;align-items:center;gap:6px}
 .trust .ic{width:18px;height:18px;color:var(--red)}
 .trust strong{color:var(--ink)}
+.trust__link{display:inline-flex;align-items:center;gap:6px;color:inherit;text-decoration:none}
+.trust__link:hover strong{text-decoration:underline}
 .stars{color:var(--star);letter-spacing:.05em}
 
 .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:16px}

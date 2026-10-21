@@ -279,7 +279,7 @@ test("page content: h1, model numbers, badges, faq, contact", () => {
   assert.equal(text(mac.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/)[1]), "MacBook Pro 13″ (A2338) Reparatur in Weil am Rhein");
   assert.ok(text(mac).includes("Modellnummern: A2338"));
   const iphone = html(byUrl("/iphone-reparatur/iphone-13-pro/"));
-  assert.ok(iphone.includes("Oft in 30 Min.") && iphone.includes("Garantie") && iphone.includes("Termin per WhatsApp"));
+  assert.ok(iphone.includes("Oft in 30 Min.") && iphone.includes("Termin per WhatsApp"));
   assert.ok(!iphone.includes("Dauer nach Diagnose"));
   assert.ok(mac.includes("Dauer nach Diagnose") && !mac.includes("Oft in 30 Min."));
   assert.equal([...iphone.matchAll(/<details>/g)].length, 4);
