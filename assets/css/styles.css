@@ -296,6 +296,11 @@ html[lang="de"] .lang-note{display:none}
 .review :where(p,blockquote){margin:0}
 .review :where(cite,footer){font-size:.9375rem;font-style:normal;font-weight:600;color:var(--ink)}
 
+.intro{display:grid;grid-template-columns:1fr;gap:24px;align-items:center}
+@media (min-width:768px){.intro{grid-template-columns:1fr minmax(0,340px)}}
+.intro__video{margin:0;width:min(100%,340px);justify-self:center}
+.intro__video video{display:block;width:100%;height:auto;aspect-ratio:480/848;border-radius:var(--r-card);background:#000}
+
 .promo{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:var(--red-soft);border-radius:20px;font-size:.9375rem;font-weight:600;line-height:1.35;color:var(--red-soft-ink)}
 .promo .ic{width:18px;height:18px}
 

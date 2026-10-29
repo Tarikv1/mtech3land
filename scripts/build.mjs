@@ -68,7 +68,7 @@ function clean(outDir) {
 }
 
 // Static files the browser loads. Everything else in the repo (src/, scripts/, data sources, docs) stays out of the site.
-const RUNTIME_DIRS = ["assets/css", "assets/js", "assets/img", "assets/fonts"];
+const RUNTIME_DIRS = ["assets/css", "assets/js", "assets/img", "assets/fonts", "assets/video"];
 const TEXT_ASSET = /\.(css|js|svg)$/;
 
 export function runtimeAssets(root) {

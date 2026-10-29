@@ -139,6 +139,18 @@ ${render(partials.picker, { site, t: strings.de, picker: { idAttr: ' id="preise"
   ${[1, 2, 3].map((n) => `<li class="step">${tr("h3", `home.how.${n}.title`)}${tr("p", `home.how.${n}.text`)}</li>`).join("\n  ")}
 </ol>`;
 
+  const video = `<div class="intro">
+  <div class="intro__copy">
+    ${tr("h2", "home.video.title", ' class="h2"')}
+    ${tr("p", "home.video.lede", ' class="lede"')}
+  </div>
+  <figure class="intro__video">
+    <video controls playsinline preload="none" width="480" height="848" poster="/assets/video/vorstellung-poster.jpg" aria-label="${esc(tx("home.video.label"))}" data-i18n-attr="aria-label:home.video.label">
+      <source src="/assets/video/vorstellung.mp4" type="video/mp4">
+    </video>
+  </figure>
+</div>`;
+
   const quotes = QUOTES.map(
     (q) => `<figure class="review">
   ${FIVE_STARS}
@@ -177,6 +189,7 @@ ${sectionsHtml(
     { id: "leistungen", html: services },
     prices,
     { id: "ablauf", html: steps },
+    { id: "vorstellung", html: video },
     { id: "bewertungen", html: reviewsHtml },
     faq,
     { id: "kontakt", html: contact },
