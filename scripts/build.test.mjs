@@ -271,7 +271,7 @@ test("i18n.js keeps its behaviour and reads window.MT_STR", () => {
   assert.ok(!code.includes('"nav.services"'), "dictionary must not be inlined any more");
 });
 
-const RUNTIME = /^(?:[^/]+\.html|[a-z0-9-]+(?:\/[a-z0-9-]+)*\/index\.html|sitemap\.xml|robots\.txt|CNAME|\.build-manifest\.json|assets\/(?:css|js|img|fonts)\/[^/]+|assets\/data\/picker\.json)$/;
+const RUNTIME = /^(?:[^/]+\.html|[a-z0-9-]+(?:\/[a-z0-9-]+)*\/index\.html|sitemap\.xml|robots\.txt|CNAME|\.build-manifest\.json|assets\/(?:css|js|img|fonts|video)\/[^/]+|assets\/data\/picker\.json)$/;
 
 test("artifact holds only runtime files", () => {
   const dir = tmp();

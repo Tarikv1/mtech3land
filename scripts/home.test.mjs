@@ -99,6 +99,29 @@ test("hero copy", () => {
   assert.match(hero, /<img src="\/assets\/img\/storefront\.jpg" width="1400" height="1050" fetchpriority="high" alt="[^"]+"/);
 });
 
+test("home shows the intro video, self-hosted and not autoplaying", () => {
+  const main = mainOf(html);
+  const at = ["id=\"ablauf\"", "id=\"vorstellung\"", "id=\"bewertungen\""].map((m) => main.indexOf(m));
+  assert.ok(at[1] >= 0, "missing id=\"vorstellung\"");
+  assert.deepEqual([...at].sort((a, b) => a - b), at, "vorstellung sits between ablauf and bewertungen");
+  const section = sectionOf("vorstellung");
+  assert.equal([...section.matchAll(/<video\b/g)].length, 1);
+  const video = section.match(/<video\b[^>]*>/)[0];
+  for (const attr of ["controls", "playsinline", 'preload="none"']) assert.ok(new RegExp(`\\s${attr}(\\s|>)`).test(video), `video lacks ${attr}`);
+  for (const attr of ["autoplay", "muted", "loop"]) assert.doesNotMatch(section, new RegExp(`\\s${attr}(\\s|=|>)`), `video must not have ${attr}`);
+  assert.ok(section.includes('poster="/assets/video/vorstellung-poster.jpg"'));
+  assert.ok(section.includes('<source src="/assets/video/vorstellung.mp4" type="video/mp4">'));
+  for (const m of section.matchAll(/\b(?:src|poster)="([^"]*)"/g)) assert.ok(m[1].startsWith("/assets/"), `not self-hosted: ${m[1]}`);
+  for (const file of ["vorstellung.mp4", "vorstellung-poster.jpg"]) {
+    const built = fs.readFileSync(path.join(out, "assets/video", file));
+    assert.ok(built.equals(fs.readFileSync(path.join(root, "assets/video", file))), `${file} differs from the repo copy`);
+  }
+  assert.ok(fs.statSync(path.join(out, "assets/video/vorstellung.mp4")).size < 8 * 1024 * 1024, "mp4 under 8 MB");
+  for (const key of ["home.video.title", "home.video.lede", "home.video.label"]) {
+    for (const lang of ["de", "en"]) assert.equal(typeof strings[lang][key], "string", `${lang}/${key}`);
+  }
+});
+
 test("service tiles link the six service pages", () => {
   const tiles = sectionOf("leistungen").match(/<ul class="tiles tiles--svc">([\s\S]*?)<\/ul>/)[1];
   const links = [...tiles.matchAll(/<a class="tile tile--svc" href="([^"]*)"/g)].map((m) => m[1]);
